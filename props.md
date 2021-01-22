@@ -4,13 +4,31 @@ Answer these on your own, then compare answers as a group
 
 1.  What are props?
 
+  functions or variables that holds state that you want to pass from a parent component to a child component
+
+
 2.  How do you pass props from a parent to a child?
+
+    in the <ChildComponent  propName={propValue}/> inside of render, you put the name of the prop = {function/state you want to pass}
+
 
 3.  How do you access props from a class-based child component?
 
+  we need to utilize context
+  by using the this.props.propsname 
+
 4.  How do you access props from a functional component?
 
+    pass props in as the parameter of the function
+    {props.nameOfProp} to access the value from the props object
+    no this keyword
+
+
+
 5.  How do you bind a function to a parent component so that it can be passed to a child?
+
+    constructor part 
+    this.nameOfVariable = this.nameOfVariable.bind(this)  
 
 ### Understand
 
@@ -20,6 +38,7 @@ Discuss this question in pairs if you have a 4-person group
 
 ```jsx
 import React, { Component } from "react";
+import Student from 'Student.js';
 
 class Queue extends Component {
   constructor() {
